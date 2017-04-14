@@ -16,7 +16,7 @@ sub_electric_power$Date <- as.Date(sub_electric_power$Date, format="%d/%m/%Y")
 sub_electric_power$Time <- strptime(sub_electric_power$Time, format="%H:%M:%S")
 sub_electric_power[1:1440,"Time"] <- format(sub_electric_power[1:1440,"Time"],"2007-02-01 %H:%M:%S")
 sub_electric_power[1441:2880,"Time"] <- format(sub_electric_power[1441:2880,"Time"],"2007-02-02 %H:%M:%S")
-png("plot1.png", width=480, height=480)
+
 
 # Inititae mixed plot
 par(mfrow=c(2,2))
